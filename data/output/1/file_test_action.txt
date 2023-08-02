@@ -1,0 +1,5 @@
+test_change_file	OK	{"status":"OK"}
+test_delete_all_files	OK	{"status":"OK"}
+test_delete_single_file	OK	{"status":"OK"}
+test_get_vector_id	OK	{"status":"OK","result":[]}
+test_upload	OK	{"status":"OK"}
