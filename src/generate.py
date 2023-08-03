@@ -86,7 +86,7 @@ class TestGenerateAction(unittest.TestCase):
 
     def test_1_business_email(self):
         log_filename = time.strftime("%Y-%m-%d %H:%M:%S") + " business_email.txt"
-        log(log_filename, "id\toutput")
+        log(log_filename, "id,output")
         response = r.post(
             self.URL,
             json={
@@ -108,12 +108,12 @@ class TestGenerateAction(unittest.TestCase):
             self.assertIn(response.status_code, [200, 201])
             self.assertIn(response.json()["status"], ["OK", "WAITING", "PROCESSING"])
             if response.json()["status"] == "OK":
-                log(log_filename, f"{job_id}\t{purify_content(response.json()['result'])}")
+                log(log_filename, f"{job_id},{purify_content(response.json()['result'])}")
                 break
 
     def test_2_email_summary(self):
         log_filename = time.strftime("%Y-%m-%d %H:%M:%S") + " email_summary.txt"
-        log(log_filename, "file_name\tinput\toutput")
+        log(log_filename, "file_name,input,output")
         job_list = set()
         for pp in file_list():
             with open(pp[0], "r") as file:
@@ -142,13 +142,13 @@ class TestGenerateAction(unittest.TestCase):
             self.assertIn(response.status_code, [200, 201])
             self.assertIn(response.json()["status"], ["OK", "WAITING", "PROCESSING"])
             if response.json()["status"] == "OK":
-                log(log_filename, f"{entity[1]}\t{purify_content(entity[2])}\t{purify_content(response.json()['result'])}")
+                log(log_filename, f"{entity[1]},{purify_content(entity[2])},{purify_content(response.json()['result'])}")
                 continue
             job_list.add(entity)
 
     def test_3_reply_summary(self):
         log_filename = time.strftime("%Y-%m-%d %H:%M:%S") + " reply_summary.txt"
-        log(log_filename, "file_name\tinput\toutput")
+        log(log_filename, "file_name,input,output")
         job_list = set()
 
         def tmp_result(content, name):
@@ -187,13 +187,13 @@ class TestGenerateAction(unittest.TestCase):
             self.assertIn(response.json()["status"], ["OK", "WAITING", "PROCESSING"])
             if response.json()["status"] == "OK":
                 tmp_result(response.json()["result"], entity[1])
-                log(log_filename, f"{entity[1]}\t{purify_content(entity[2])}\t{purify_content(response.json()['result'])}")
+                log(log_filename, f"{entity[1]},{purify_content(entity[2])},{purify_content(response.json()['result'])}")
                 continue
             job_list.add(entity)
 
     def test_4_reply(self):
         log_filename = time.strftime("%Y-%m-%d %H:%M:%S") + " reply.txt"
-        log(log_filename, "file_name\tinput\toutput")
+        log(log_filename, "file_name,input,output")
         job_list = set()
         for pp in file_list("tmp"):
             with open(pp[0], "r") as file:
@@ -223,7 +223,7 @@ class TestGenerateAction(unittest.TestCase):
             self.assertIn(response.status_code, [200, 201])
             self.assertIn(response.json()["status"], ["OK", "WAITING", "PROCESSING"])
             if response.json()["status"] == "OK":
-                log(log_filename, f"{entity[1]}\t{purify_content(entity[2])}\t{purify_content(response.json()['result'])}")
+                log(log_filename, f"{entity[1]},{purify_content(entity[2])},{purify_content(response.json()['result'])}")
                 continue
             job_list.add(entity)
 
