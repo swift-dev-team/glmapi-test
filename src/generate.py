@@ -85,7 +85,7 @@ class TestGenerateAction(unittest.TestCase):
         return response
 
     def test_1_business_email(self):
-        log_filename = time.strftime("%Y-%m-%d %H:%M:%S") + " business_email.txt"
+        log_filename = time.strftime("%Y-%m-%d %H:%M:%S") + " business_email.csv"
         log(log_filename, "id,output")
         response = r.post(
             self.URL,
@@ -112,7 +112,7 @@ class TestGenerateAction(unittest.TestCase):
                 break
 
     def test_2_email_summary(self):
-        log_filename = time.strftime("%Y-%m-%d %H:%M:%S") + " email_summary.txt"
+        log_filename = time.strftime("%Y-%m-%d %H:%M:%S") + " email_summary.csv"
         log(log_filename, "file_name,input,output")
         job_list = set()
         for pp in file_list():
@@ -147,7 +147,7 @@ class TestGenerateAction(unittest.TestCase):
             job_list.add(entity)
 
     def test_3_reply_summary(self):
-        log_filename = time.strftime("%Y-%m-%d %H:%M:%S") + " reply_summary.txt"
+        log_filename = time.strftime("%Y-%m-%d %H:%M:%S") + " reply_summary.csv"
         log(log_filename, "file_name,input,output")
         job_list = set()
 
@@ -192,7 +192,7 @@ class TestGenerateAction(unittest.TestCase):
             job_list.add(entity)
 
     def test_4_reply(self):
-        log_filename = time.strftime("%Y-%m-%d %H:%M:%S") + " reply.txt"
+        log_filename = time.strftime("%Y-%m-%d %H:%M:%S") + " reply.csv"
         log(log_filename, "file_name,input,output")
         job_list = set()
         for pp in file_list("tmp"):
