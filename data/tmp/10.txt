@@ -1,21 +1,22 @@
-尊敬的[卖家姓名]，
+To respond to emails from foreign buyers, you can use the following template:
 
-希望您一切顺利。我代表[公司名称]，一家在[行业]领域领先的公司，写信给您。我们最近了解到贵公司的产品，并对与贵公司探讨可能的商机感兴趣。
+Subject: Inquiry Regarding [Product Name]
 
-首先，我们想了解您产品的生产清单。能否请您提供一份详细的目录或产品清单，其中包括您提供的产品范围？我们对[具体产品或类别]特别感兴趣，并将非常感谢您提供的任何额外信息或规格。
+Dear [Buyer's Name],
 
-此外，我们想了解您所感兴趣的产品的最早交货时间。由于我们努力满足我国特定的产品规定，确保交货时间与我们的业务要求相符对我们来说非常重要。您能否告知我们大约的生产和交货时间？
+Thank you for your interest in our products. We are pleased to provide you with the information you requested:
 
-此外，我们想讨论潜在订单的付款条件。能否请您提供有关您首选的付款方式以及适用的具体条款和条件的信息？这将使我们能够相应地安排财务安排，并确保业务交易的顺利高效。
+Lead time: [Specify the lead time in months]
+Price: [Specify the price in USD]
+Payment conditions: 50% advance, 50% upon delivery
+Warranty: [Specify the warranty terms, if applicable]
 
-最后，我们恳请您协助提供一份反映讨论的定价和条款的适当发票。请还包括我们应该了解的任何其他相关条款和条件。
+Please let us know if you have any further questions or if there is anything else we can assist you with. We look forward to the opportunity to work with you.
 
-非常感谢您对此事的及时关注。我们期待您的回复，并期望与贵公司建立富有成效的业务关系。如果您需要任何进一步的信息或有任何问题，请随时直接与我联系。
+Best regards,
 
-此致，
+[Your Name]
+[Your Position]
+[Your Company Name]
 
-[您的姓名]
-[您的职位]
-[公司名称]
-[联系信息]
 (内容仅供参考)
